@@ -1,3 +1,4 @@
+```mermaid
 Title: Sequence Diagram for Food Ordering Process
 
 User -> Application: Select restaurant and add dishes to cart
