@@ -11,3 +11,4 @@ Restaurant -> Courier: Order is ready for pickup
 Courier -> Application: Order picked up
 Courier -> User: Deliver order
 User -> Application: Confirm order receipt
+```
