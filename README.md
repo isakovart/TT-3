@@ -1,6 +1,27 @@
 # TT-3
 ТЗ 3 Исаков Артём Владиславович ББИ 239
 ```mermaid
+sequenceDiagram
+participant User
+participant App
+participant Restaurant
+participant PaymentGateway
+participant Courier
+
+User ->> App: Выбор ресторана и блюд
+App ->> Restaurant: Запрос меню
+Restaurant -->> App: Отправка меню
+User ->> App: Добавление блюд в корзину
+User ->> App: Оформление заказа
+App ->> PaymentGateway: Обработка платежа
+PaymentGateway -->> App: Подтверждение платежа
+App ->> Restaurant: Передача заказа
+Restaurant -->> App: Подтверждение заказа
+App ->> Courier: Назначение курьера
+Courier -->> App: Подтверждение доставки
+App ->> User: Уведомление о статусе заказа
+```
+```mermaid
 stateDiagram
     [*] --> Новый
     Новый --> Принят: заказ подтвержден рестораном
